@@ -34,7 +34,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col ${language === 'ar' ? 'font-arabic' : 'font-sans'}`}>
+    <div className={`min-h-screen flex flex-col bg-[#FAF7F0] text-[#1A1A1A] ${language === 'ar' ? 'font-amiri text-[17px]' : 'font-serif text-[16px]'}`}>
       {/* Top Navbar */}
       <Navbar
         language={language}

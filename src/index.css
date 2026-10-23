@@ -1,41 +1,99 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: "Amiri", "Source Serif 4", "Traditional Arabic", "Georgia", serif;
+  --font-heading-ar: "Amiri", "Traditional Arabic", serif;
+  --font-heading-en: "DM Serif Display", "Cinzel", serif;
+  --font-cinzel: "Cinzel", "Times New Roman", serif;
+  --font-amiri: "Amiri", "Traditional Arabic", serif;
+}
+
 @layer base {
   :root {
-    --color-gold: #CC9736;
-    --color-gold-hover: #b6822a;
-    --color-gold-light: #fdf8ef;
-    --color-navy: #19233E;
-    --color-navy-dark: #0f172a;
-    --color-navy-light: #253359;
+    --color-gold: #C59B27;
+    --color-gold-hover: #A67C1E;
+    --color-gold-light: #F9F6EE;
+    --color-navy: #111C2E;
+    --color-navy-dark: #0A111C;
+    --color-navy-light: #1A2840;
+    --color-parchment: #FAF7F0;
+    --color-parchment-border: #E3D9C6;
   }
 
-  html[dir="rtl"] {
-    font-family: 'IBM Plex Sans Arabic', 'Cairo', system-ui, -apple-system, sans-serif;
+  html[dir="rtl"], [dir="rtl"] {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    background-color: #FAF7F0;
+    color: #1A1A1A;
+  }
+
+  html[dir="rtl"] .font-serif, [dir="rtl"] .font-serif {
+    font-family: 'Amiri', 'Traditional Arabic', serif !important;
   }
 
   html[dir="ltr"] {
-    font-family: 'Poppins', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    font-family: 'Source Serif 4', 'Georgia', serif;
+    background-color: #FAF7F0;
+    color: #1A1A1A;
   }
 }
 
-/* Custom scrollbars for gallery and modal lists */
+/* Old school heritage typography utilities */
+.font-heading-ar {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+}
+
+.font-heading-en {
+  font-family: 'DM Serif Display', 'Cinzel', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+}
+
+.font-amiri {
+  font-family: 'Amiri', 'Traditional Arabic', serif !important;
+}
+
+/* Old school realistic architectural and stamp accents */
+.old-school-border {
+  border: 1px solid #D5C7B0;
+  box-shadow: inset 0 0 0 1px rgba(197, 155, 39, 0.15), 0 2px 4px rgba(17, 28, 46, 0.04);
+}
+
+.old-school-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DFD5C3;
+  box-shadow: 0 1px 3px rgba(17, 28, 46, 0.04), 0 4px 12px rgba(17, 28, 46, 0.03);
+}
+
+.old-school-navy-card {
+  background: linear-gradient(180deg, #132034 0%, #0E1726 100%);
+  border: 1px solid #2A3B54;
+  box-shadow: inset 0 1px 0 rgba(197, 155, 39, 0.2), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gold-engraved-text {
+  background: linear-gradient(135deg, #F3DE9C 0%, #C59B27 50%, #E7C66E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #F1EDE2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+  background: #C4B59D;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #A6957A;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
